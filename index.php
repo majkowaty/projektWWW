@@ -17,9 +17,9 @@
     <button id="rozpocznij">Zaczynamy!</button>
     <p id="wybor" style="display:none">
         Wybierz poziom trudności:
-        <a href="learning.php?=A">Początkujący</a>
-        <a href="learning.php?=B">Średni</a>
-        <a href="learning.php?=C">Zaawansowany</a>
+        <a href="learning.php?category=A">Początkujący</a>
+        <a href="learning.php?category=B">Średni</a>
+        <a href="learning.php?category=C">Zaawansowany</a>
     </p>
     <?php
     require('footer.php');
