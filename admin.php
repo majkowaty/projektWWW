@@ -6,8 +6,9 @@
     <title>Panel Administratora</title>
 </head>
 <body>
-    <? require("menu.php"); ?>
+    <?php require("menu.php"); ?>
    <h1>Panel Administratora</h1>
+    <a href="fiszkilista.php">Zarządzaj fiszkami</a>
     <p>Dodaj fiszke:</p>
     <form action="dodajfiszke.php" method="POST">
         <input type="text" name="pslowo" placeholder="Słówko polskie">
