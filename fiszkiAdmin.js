@@ -15,4 +15,24 @@ $(document).ready(function() {
         let id = tr.find('td.id').text();
         location.href = "edytujFiszke.php?id="+id;
     }))
+
+    $(".accept").on("click", (function(){
+        let guzik=$(this);
+        let tr = guzik.closest('tr');
+        let id= tr.find('td.id').text();
+        let row = guzik.parent().parent();
+        $.post("acceptSuggest.php", {id:id}, function(data){
+            row.remove();
+        })
+    }))
+
+    $(".deny").on("click", (function(){
+        let guzik=$(this);
+        let tr = guzik.closest('tr');
+        let id= tr.find('td.id').text();
+        let row = guzik.parent().parent();
+        $.post("deleteSuggest.php", {id:id}, function(data){
+            row.remove();
+        })
+    }))
 })
