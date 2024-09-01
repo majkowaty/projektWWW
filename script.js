@@ -10,13 +10,19 @@ $(document).ready(function() {
         const poprawne = $("#poprawne").text();
         if(odpowiedz == poprawne){
             $("#sprawdz").text("Prawidłowa odpowiedź!");
-            $("#sprawdz").attr('style', 'color: green;');
+            $("#sprawdz").attr('style', 'color: green;'); // pokazuje sie ze odpowiedziales prawidlowo
             $("#odp").attr("style", "display:none");
-            $("#tlu").attr("style", "display:none");
-            $("#next").attr("style", "display:block");
+            $("#tlu").attr("style", "display:none"); // znikaja oba przyciski do sprawdzenia odpowiedzi/tlumaczenia
             let numer = $("#formNext").attr('value');
             numer++;
             $("#formNext").attr('value', numer);
+            $.ajax({
+                url: "updateProgress.php",
+                type: "POST",
+                data: {kategoria: $("#kat").attr('value'), progress: $("#formNext").attr('value')}
+            }).done(function(data){
+                $("#next").attr("style", "display:block");
+            });
         }
         else
         {
