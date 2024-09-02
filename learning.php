@@ -22,6 +22,7 @@
     $result = $conn->query($q);
     $progress=$id;
     $licznik=0;
+    $licznik=0;
     $conn->query($q);
     ?>
     <div id="content">
@@ -30,7 +31,9 @@
         $polskie = $row->SlowkoP;
         $angielskie = $row->SlowkoA;
         $licznik++;
+        $licznik++;
         }
+        if($licznik>=$progress){
         if($licznik>=$progress){
         echo "<p id='pierwsze' style='font-size: 50px'>$polskie</p>";
         echo "<input id='odpowiedz' type='text'>";
@@ -39,6 +42,10 @@
         echo "<button style='display:none' id='zglos'>Zgłoś tą fiszke jako błędną</button>";
         echo "<p id='sprawdz'></p>";
         echo "<p id='poprawne' style='display:none'>$angielskie<p>";
+        }
+        else{
+            echo "Rozwiązałeś już wszystkie fiszki z tej kategorii!";
+        }
         }
         else{
             echo "Rozwiązałeś już wszystkie fiszki z tej kategorii!";
