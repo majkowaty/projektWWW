@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rybki</title>
-    <?php
-    require('menu.php');
-    ?>
-    <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
-    <script src="script.js"></script>
+    <?php require("scripts.php") ?>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    Z NAMI NAUCZYSZ SIE ANGIELSKIEGO SZYBCIEJ NIZ NA DUOLINGO!!!!!!!!!!!!<br>
+    <?php require('menu.php'); ?>
+    <div id="content">
+    <h1>Nauka słówek</h1>
+    <p>Witamy! Na naszej stronie w prosty sposób będziesz mógł poćwiczyć swoje słownictwo w języku angielskim. Aby zacząć, kliknij guzik i wybierz poziom trudności.<Br><br>W zakładce mój postęp możesz sprawdzić ile fiszek z naszego słownika już zgadłeś! Jeżeli brakuję ci jakichś wyrazów/tłumaczeń, kliknij zakładkę "Zaproponuj fiszkę".<br><br>Powodzenia!</p><br>
     <button id="rozpocznij">Zaczynamy!</button>
     <p id="wybor" style="display:none">
-        Wybierz poziom trudności:
-        <a href="learning.php?category=A">Początkujący</a>
-        <a href="learning.php?category=B">Średni</a>
-        <a href="learning.php?category=C">Zaawansowany</a>
+        Wybierz poziom trudności:<br>
+        <a id="Beg" href="learning.php?category=A">Początkujący</a><br>
+        <a id="Int" href="learning.php?category=B">Średni</a><br>
+        <a id="Adv" href="learning.php?category=C">Zaawansowany</a>
     </p>
+    </div>
     <?php
     require('footer.php');
     ?>

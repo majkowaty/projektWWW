@@ -6,10 +6,15 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
     <script src='fiszkiAdmin.js'></script>
     <title>Lista fiszek</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php
     require("menu.php");
+    ?>
+    <div id="content">
+    <?php
+    require("access.php");
     $sql="SELECT * FROM slowka";
     $result=$conn->query("$sql");
     if($result -> num_rows > 0) {
@@ -25,5 +30,6 @@
     }
     ?>
     <a href="admin.php">Powrót</a>
+    </div>
 </body>
 </html>

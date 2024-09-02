@@ -1,0 +1,202 @@
+#navi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    background-color: hsl(225, 73%, 75%);
+    width: 40vw;
+    height: 6vh;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 2px;
+    border-style: solid;
+    border-color: midnightblue;
+   
+}
+
+body {
+    background-color: rgb(72, 72, 124);
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#navi > a {
+        background-color: #387776;
+        color: white;
+        padding: 15px 25px;
+        text-decoration: none;
+        border-radius: 10px;
+        transition-duration: 0.2s;
+}
+
+#navi > a:hover {
+    background-color: rgb(171, 7, 40);
+}
+
+#siema {
+    display: flex;
+    color: white;
+    justify-content: right;
+    font-size: 50px;
+    width: 20%;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    font-style: italic;
+    background-color: rgb(210, 30, 48);
+    border-radius: 2px;
+}
+
+#siema > a {
+    text-decoration: none;
+    color: midnightblue;
+}
+
+#siema > a:visited {
+    color:midnightblue;
+}
+
+#stopka {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.myProgressContainer { 
+    background-color: rgb(192, 192, 192); 
+    width: 33%; 
+    border-radius: 15px; 
+    display: inline-flex;
+} 
+
+.progress { 
+    background-color: rgb(116, 194, 92); 
+    color: white; 
+    padding: 1%; 
+    text-align: right;
+    font-size: 20px; 
+    border-radius: 15px;
+}
+
+#content {
+    margin: auto;
+    width: 35%;
+    background-color: rgb(224, 233, 244);
+    height: 100vh;
+    padding: 10px;
+    text-align: justify;
+}
+
+#content > h1 {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 35px;
+}
+
+#content > p {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#wybor {
+    text-align: center;
+    padding: 5px;
+}
+
+#content > button {
+    display: flex;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 30px;
+}
+.rankingContainer{
+    width: 33%;
+    background-color: rgb(192, 192, 192);
+    border-radius: 5px;
+    float: left;
+    margin-left: 5px;
+}
+
+#wybor {
+    font-size: 20px;
+}
+#wybor > a {
+    text-decoration: none;
+}
+#wybor > a:hover{
+    text-decoration: underline;
+    background-color:rgb(255, 236, 187);
+}
+#Beg:visited {
+    color:darkgreen;
+    
+}
+#Int:visited {
+    color: orange;
+}
+#Adv:visited {
+    color:crimson;
+}
+
+#Beg{
+    color:darkgreen;
+    
+}
+#Int{
+    color: orange;
+}
+#Adv{
+    color:crimson;
+}
+
+.form{
+    display: flex;
+    width: 20%;
+    height: 340px;
+    background-color: rgb(224, 233, 244);
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    margin-top: 10%;
+    flex-direction: column;
+    border: 3px;
+    border-style: solid;
+    border-color:  rgb(123, 157, 212);
+}
+
+.formularz {
+    text-align: center;
+}
+
+.login-title {
+    font-size: 40px;
+}
+
+.login-button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.25s;
+}
+
+.login-button:hover {
+    background-color: rgb(11, 133, 11);
+}
+
+.link > a {
+    color:rgb(164, 15, 45);
+}
+
+.link > a:visited {
+    color:rgb(164, 15, 45);
+}

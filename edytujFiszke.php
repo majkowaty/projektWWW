@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edycja fiszki</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php require("menu.php");
+    require("access.php");
     $id=$_GET['id'];
     $sql="SELECT * FROM slowka WHERE id=$id";
     $result=$conn->query($sql);

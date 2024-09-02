@@ -6,10 +6,15 @@
     <title>Sugestie fiszek</title>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
     <script src='fiszkiAdmin.js'></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php
     require("menu.php");
+    ?>
+    <div id="content">
+    <?php
+    require("access.php");
     $sql="SELECT * FROM propozycje";
     $result=$conn->query("$sql");
     if($result -> num_rows > 0) {
@@ -24,5 +29,6 @@
             echo "Brak propozycji.";
         }
     ?>
+    </div>
 </body>
 </html>

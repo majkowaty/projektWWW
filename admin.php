@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Panel Administratora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php require("menu.php"); ?>
+    <?php require("menu.php");
+    require("access.php");
+    ?>
+    <div id="content">
    <h1>Panel Administratora</h1>
     <a href="fiszkilista.php">Zarządzaj fiszkami</a>
     <a href="suggestionPanel.php">Propozycje użytkowników</a>
@@ -21,6 +25,6 @@
         </select>
         <input type="submit" value="Dodaj fiszkę">
     </form>
-    
+    </div>
 </body>
 </html>

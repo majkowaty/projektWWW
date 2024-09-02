@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Rejestracja</title>
 </head>
 <body>
 <?php
@@ -31,16 +31,18 @@ href='registration.php'>rejestracji</a>.</p>
  }
  } else {
 ?>
- <form class="form" action="" method="post">
+<div class="form">
+ <form class="formularz" action="" method="post">
  <h1 class="login-title">Rejestracja</h1>
- <input type="text" class="login-input" name="login" placeholder="Login" required/>
+ <input type="text" class="login-input" name="login" placeholder="Login" required/><br><br>
  <input type="password" class="login-input" name="haslo" placeholder="Hasło"
-required/>
+required/><br><br>
  <input type="text" class="login-input" name="email" placeholder="Adres email"
-required/>
- <input type="submit" name="submit" value="Zarejestruj się" class="login-button">
+required/><br><br>
+ <input type="submit" name="submit" value="Zarejestruj się" class="login-button"><br>
  <p class="link"><a href="login.php">Zaloguj się</a></p>
  </form>
+ </div>
 <?php
  }
 ?>
