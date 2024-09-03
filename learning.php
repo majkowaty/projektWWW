@@ -22,7 +22,6 @@
     $result = $conn->query($q);
     $progress=$id;
     $licznik=0;
-    $licznik=0;
     $conn->query($q);
     ?>
     <div id="learning">
@@ -31,9 +30,7 @@
         $polskie = $row->SlowkoP;
         $angielskie = $row->SlowkoA;
         $licznik++;
-        $licznik++;
         }
-        if($licznik>=$progress){
         if($licznik>=$progress){
         echo "<div id='polskie-container'><p id='pierwsze'>$polskie</p></div>";
         echo "<div id='user-reply'><input id='odpowiedz' type='text'><br>";
@@ -45,11 +42,6 @@
         }
         else{
             echo "<p class='alldone'>Rozwiązałeś już wszystkie fiszki z tej kategorii!<br><a href='index.php'>Powrót</a></p>";
-            
-        }
-        }
-        else{
-            echo "<p class='alldone'>Rozwiązałeś już wszystkie fiszki z tej kategorii!<br><br><a href='index.php'>Powrót</a></p>";
         }
     ?>
     </div>
