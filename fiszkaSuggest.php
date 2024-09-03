@@ -9,8 +9,8 @@
 <body>
 <?php require('menu.php'); ?>
 <div id="content">
-    <p>Zaproponuj własną fiszkę!<br/>Zostanie ona dodana po zatwierdzeniu przez administratora.</p>
-    <form action="suggest.php" method="POST">
+    <h2>Zaproponuj własną fiszkę!</h2><p style="text-align:center">Zostanie ona dodana po zatwierdzeniu przez administratora.</p>
+    <form action="suggest.php" method="POST" class="formularz">
         <input type="text" name="pslowo" placeholder="Słówko polskie">
         <input type="text" name="aslowo" placeholder="Słówko angielskie">
         <select name="poziom" >
@@ -20,7 +20,7 @@
         </select>
         <input type="submit" value="Zaproponuj fiszkę">
     </form>
-    <a href="index.php">Anuluj</a>
+    <a href="index.php" class="back">Anuluj</a>
 </div>
 </body>
 </html>

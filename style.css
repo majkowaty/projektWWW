@@ -67,7 +67,7 @@ body {
 
 .myProgressContainer { 
     background-color: rgb(192, 192, 192); 
-    width: 33%; 
+    width: 70%; 
     border-radius: 15px; 
     display: inline-flex;
 } 
@@ -80,6 +80,31 @@ body {
     font-size: 20px; 
     border-radius: 15px;
 }
+
+.myProgressParagraph {
+    font-size: 25px;
+}
+
+#kontenerNaWyniki {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(205, 250, 199);
+    padding-bottom: 40px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+#progressNick {
+    font-size: 50px;
+    font-style: italic;
+    background-color: rgb(180, 0, 36);
+    color:white;
+    padding: 8px;
+    float: left;
+}
+
 
 #content {
     margin: auto;
@@ -126,6 +151,7 @@ body {
 }
 #wybor > a {
     text-decoration: none;
+    padding:3px;
 }
 #wybor > a:hover{
     text-decoration: underline;
@@ -199,4 +225,190 @@ body {
 
 .link > a:visited {
     color:rgb(164, 15, 45);
+}
+
+#learning {
+    margin: auto;
+    width: 35%;
+    background-color: rgb(224, 233, 244);
+    height: 100vh;
+    padding: 10px;
+}
+
+#pierwsze {
+    text-align: center;
+    font-size: 50px;
+    vertical-align: middle;
+    line-height: 125px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#polskie-container {
+    height:125px;
+    width:400px;
+    position: relative;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+#user-reply {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#user-reply > button {
+    width: 50%;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    padding:5px;
+}
+
+#odpowiedz {
+    width: 50%;
+    height: 60px;
+    font-size: 35px;
+    text-align: center;
+    
+}
+
+#angielskie-container {
+    height:125px;
+    width:400px;
+    position: relative;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+#poprawne {
+    text-align: center;
+    font-size: 50px;
+    vertical-align: middle;
+    line-height: 125px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.alldone {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(9, 168, 9);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.alldone > a:hover{
+    color: crimson;
+}
+
+#formnext {
+    width: 50%;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    padding:5px;
+}
+
+#formnext > button {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+    padding:5px;
+    background-color: #6ce38c;
+}
+
+#formnext > button:hover {
+    background-color: #44ac60;
+}
+
+#sprawdz {
+    font-size: 40px;
+    font-style: italic;
+}
+
+#tlu {
+    background-color: rgb(255, 232, 101);
+}
+
+#odp {
+    background-color: #6ce38c;
+}
+
+#tlu:hover {
+    background-color: rgb(210, 179, 69);
+}
+
+#odp:hover {
+    background-color: #44ac60;
+}
+
+#zglos {
+    background-color: rgb(255, 232, 101);
+}
+
+#zglos:hover {
+    background-color: rgb(210, 179, 69);
+}
+
+#content > h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.back {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.back:hover{
+    color:darkred;
+}
+
+.flista {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.flista tbody {
+    border: 2px solid;
+}
+
+.flista >td,th {
+    padding: 3px;
+}
+
+.flista th{
+    background-color: rgb(208, 202, 251);
+}
+
+.flista tr:nth-child(odd){
+    background-color: aliceblue;
+}
+
+#adminWybor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+#adminWybor a {
+    background-color: #04aa44;
+    text-decoration: none;
+    padding: 14px;
+    color: white;
+}
+
+#adminWybor a:hover{
+    background-color: #017249;
 }

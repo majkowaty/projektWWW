@@ -4,6 +4,7 @@ $(document).ready(function() {
         });
     $("#tlu").on("click", function(){
         $("#poprawne").attr("style", "display:block");
+        $("#angielskie-container").attr("style", "display:block");
         });
     $("#odp").on("click", function(){
         const odpowiedz = $("#odpowiedz").val();

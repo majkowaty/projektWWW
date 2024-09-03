@@ -13,8 +13,9 @@
     $sql="SELECT * FROM slowka WHERE id=$id";
     $result=$conn->query($sql);
     $row=$result->fetch_object(); ?>
-
-    <form action="submitEdit.php" method="POST">
+    <div id="content">
+        <h2>Edytuj fiszkę</h2>
+    <form action="submitEdit.php" method="POST" class="formularz">
         <input type="hidden" name="id" value="<?=$row->id ?>">
         <input type="text" name="pslowo" value="<?=$row->SlowkoP?>" placeholder="Słówko polskie">
         <input type="text" name="aslowo" value="<?=$row->SlowkoA?>" placeholder="Słówko angielskie">
@@ -25,6 +26,7 @@
         </select>
         <input type="submit" value="Zapisz zmiany">
     </form>
-    <a href="fiszkiLista.php">Powrót</a>
+    <a href="fiszkiLista.php" class="back">Powrót</a>
+    </div>
 </body>
 </html>

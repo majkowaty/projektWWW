@@ -17,9 +17,10 @@
     require("access.php");
     $sql="SELECT * FROM propozycje";
     $result=$conn->query("$sql");
+    echo "<h2>Zarządzanie Sugestiami</h2>";
     if($result -> num_rows > 0) {
-        echo "<table>";
-        echo "<tr><th>Id Zgłoszenia</th><th>Słówko polskie</th><th>Słówko angielskie</th><th>Kategoria</th><th>Id Użytkownika</th><th></th></tr>";
+        echo "<table class='flista'>";
+        echo "<tr><th>Id Zgłoszenia</th><th>Słówko polskie</th><th>Słówko angielskie</th><th>Kategoria</th><th>Id Użytkownika</th><th>Akcja</th></tr>";
         while($row = $result -> fetch_object()){
             echo "<tr><td class='id'>{$row->id}</td><td>{$row->SlowkoP}</td><td>{$row->SlowkoA}</td><td>{$row->Kategoria}</td><td>{$row->idUzytkownika}</td><td><input type='button' class='accept' value='Zatwierdź'><input type='button' class='deny' value='Odrzuć'</td></tr>";
         }
@@ -29,6 +30,7 @@
             echo "Brak propozycji.";
         }
     ?>
+    <a href="admin.php" class="back">Powrót</a>
     </div>
 </body>
 </html>

@@ -10,11 +10,11 @@
     ?>
 </head>
 <body>
-    <p><?php     require('menu.php');
-    echo "<p>Progress dla użytkownika </p>";
-    echo $_SESSION['login']; ?></p>
-
+    <?php     require('menu.php'); ?>
+    <div id="content">
     <?php
+    echo "<p id='progressNick'>{$_SESSION['login']}<br></p>";
+
     $idUzytkownika = $_SESSION['id'];
     $q="SELECT id FROM slowka WHERE kategoria = 'A'";
     $result = $conn->query($q);
@@ -43,6 +43,7 @@
           <p class='myProgressParagraph'>Postęp dla kategorii C:</p><div class='myProgressContainer'><div class='progress' style='width:"; echo round( $wynikC * 100 ), '%'; echo "'></div></div>";
     ?>
     
+</div>
 </div>
 </body>
 </html>

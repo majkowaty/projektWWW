@@ -25,7 +25,7 @@
     $licznik=0;
     $conn->query($q);
     ?>
-    <div id="content">
+    <div id="learning">
     <?php
     while($row=$result->fetch_object()){
         $polskie = $row->SlowkoP;
@@ -35,20 +35,21 @@
         }
         if($licznik>=$progress){
         if($licznik>=$progress){
-        echo "<p id='pierwsze' style='font-size: 50px'>$polskie</p>";
-        echo "<input id='odpowiedz' type='text'>";
-        echo "<button id='odp'>Zatwierdź odpowiedź</button> <button id='tlu'>Zobacz tłumaczenie</button>";
-        echo "<form method='post' action=''><input id='formNext' type='hidden' value='$progress'><input id='kat' type='hidden' value='$kategoria'></input><button id='next' type='submit' style='display: none'>Przejdź do następnej fiszki</button></form>";
+        echo "<div id='polskie-container'><p id='pierwsze'>$polskie</p></div>";
+        echo "<div id='user-reply'><input id='odpowiedz' type='text'><br>";
+        echo "<button id='odp'>Zatwierdź odpowiedź</button> <br> <button id='tlu'>Zobacz tłumaczenie</button>";
+        echo "<form method='post' action='' id='formnext'><input id='formNext' type='hidden' value='$progress'><input id='kat' type='hidden' value='$kategoria'></input><button id='next' type='submit' style='display: none'>Przejdź do następnej fiszki</button></form>";
         echo "<button style='display:none' id='zglos'>Zgłoś tą fiszke jako błędną</button>";
-        echo "<p id='sprawdz'></p>";
-        echo "<p id='poprawne' style='display:none'>$angielskie<p>";
+        echo "<p id='sprawdz'></p></div>";
+        echo "<div id='angielskie-container' style='display:none'><p id='poprawne' style='display:none'>$angielskie<p></div>";
         }
         else{
-            echo "Rozwiązałeś już wszystkie fiszki z tej kategorii!";
+            echo "<p class='alldone'>Rozwiązałeś już wszystkie fiszki z tej kategorii!<br><a href='index.php'>Powrót</a></p>";
+            
         }
         }
         else{
-            echo "Rozwiązałeś już wszystkie fiszki z tej kategorii!";
+            echo "<p class='alldone'>Rozwiązałeś już wszystkie fiszki z tej kategorii!<br><br><a href='index.php'>Powrót</a></p>";
         }
     ?>
     </div>

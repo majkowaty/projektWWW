@@ -17,8 +17,9 @@
     require("access.php");
     $sql="SELECT * FROM slowka";
     $result=$conn->query("$sql");
+    echo "<h2>Zarządzanie fiszkami</h2>";
     if($result -> num_rows > 0) {
-    echo "<table>";
+    echo "<table class='flista'>";
     echo "<tr><th>Id</th><th>Słówko polskie</th><th>Słówko angielskie</th><th>Kategoria</th><th>Zarządzaj</th></tr>";
     while($row = $result -> fetch_object()){
         echo "<tr><td class='id'>{$row->id}</td><td>{$row->SlowkoP}</td><td>{$row->SlowkoA}</td><td>{$row->Kategoria}</td><td><input type='button' class='delete' value='Usuń'><input type='button' class='edit' value='Edytuj'</td></tr>";
@@ -29,7 +30,7 @@
         echo "Brak fiszek w bazie danych.";
     }
     ?>
-    <a href="admin.php">Powrót</a>
+    <a href="admin.php" class="back">Powrót</a>
     </div>
 </body>
 </html>
