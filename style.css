@@ -455,3 +455,12 @@ body {
 #wyborKat a:hover {
     background-color: #04915b;
 }
+
+#pfp{
+    margin-right: 15%;
+}
+
+#pfp > img{
+    width: 60px;
+    height: 60px;
+}

@@ -12,13 +12,18 @@
  <div id="siema">
   <?php
   $rola=$_SESSION['rola'];
+  $idUzytkownika = $_SESSION['id'];
+  $q = "SELECT zdjecie FROM uzytkownicy WHERE id='$idUzytkownika'";
+  $result = $conn->query($q);
+  $row = $result->fetch_object();
+  $zdjecie = $row->zdjecie;
   if($rola=='admin'){
-    echo "Witaj";
+    echo "<a id='pfp' href='changePfp.php'><img src='$zdjecie' alt='zdjecie profilowe'></a> Witaj";
     echo "<div style='color: rgb(210, 30, 48'>i</div>";
     echo "<a href='admin.php'>{$_SESSION['login']}!</a>";
   }
   else{
-   echo "Witaj {$_SESSION['login']}!";
+   echo "<a id='pfp' href='changePfp.php'><img src='$zdjecie' alt='zdjecie profilowe'></a> Witaj {$_SESSION['login']}!";
   }
   ?>
  </div>
