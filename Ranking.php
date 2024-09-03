@@ -14,11 +14,12 @@
     require('menu.php');
     $q="SELECT login FROM uzytkownicy ORDER BY A LIMIT 3";
     $result = $conn->query($q);
+    echo "<div id='rangi'>";
     echo "<div class='rankingContainer'><p class='rankingParagraph'>Ranking kategorii A:</p>";
     while($row=$result->fetch_object()){
         $nick = $row->login;
         echo $nick;
-        echo "<br>";
+        echo "<br><br>";
     }
     echo "</div>";
     $q="SELECT login FROM uzytkownicy ORDER BY B LIMIT 3";
@@ -27,7 +28,7 @@
     while($row=$result->fetch_object()){
         $nick = $row->login;
         echo $nick;
-        echo "<br>";
+        echo "<br><br>";
     }
     echo "</div>";
     $q="SELECT login FROM uzytkownicy ORDER BY C LIMIT 3";
@@ -36,9 +37,9 @@
     while($row=$result->fetch_object()){
         $nick = $row->login;
         echo $nick;
-        echo "<br>";
+        echo "<br><br>";
     }
-    echo "</div>";
+    echo "</div></div>";
     ?>
 </body>
 </html>

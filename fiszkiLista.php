@@ -16,8 +16,18 @@
     <?php
     require("access.php");
     $sql="SELECT * FROM slowka";
+    if(isset($_GET["Kat"])) {
+        $Kat = $_GET["Kat"];
+        $sql .= " WHERE Kategoria = '$Kat'";
+    }
+    elseif(isset($_GET["fraza"])) {
+        $fraza= $_GET["fraza"];
+        $sql .=" WHERE SlowkoP OR SlowkoA LIKE '%$fraza%'";
+    }
     $result=$conn->query("$sql");
     echo "<h2>Zarządzanie fiszkami</h2>";
+    echo "<form id='searchbar'><input type='text' placeholder='Wyszukaj frazą' name='fraza'><input type='submit' value='Wyszukaj'></form>";
+    echo "<div id='wyborKat'><a href='fiszkilista.php'>Wszystkie</a><a href='fiszkilista.php?Kat=A'>Początkujący</a><a href='fiszkilista.php?Kat=B'>Średni</a><a href='fiszkilista.php?Kat=C'>Zaawansowany</a></div>";
     if($result -> num_rows > 0) {
     echo "<table class='flista'>";
     echo "<tr><th>Id</th><th>Słówko polskie</th><th>Słówko angielskie</th><th>Kategoria</th><th>Zarządzaj</th></tr>";
@@ -27,7 +37,7 @@
     echo "</table>";
     }
     else {
-        echo "Brak fiszek w bazie danych.";
+        echo "<p style='text-align:center; font-size: 30px;'>Brak fiszek w bazie danych.</p>";
     }
     ?>
     <a href="admin.php" class="back">Powrót</a>

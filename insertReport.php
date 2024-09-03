@@ -9,4 +9,5 @@ $result = $conn->query($q);
 if(!$result){
     echo "blad";
 }
+$conn->close();
 ?>

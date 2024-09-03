@@ -140,10 +140,25 @@ body {
 }
 .rankingContainer{
     width: 33%;
+    height: 80%;
     background-color: rgb(192, 192, 192);
     border-radius: 5px;
-    float: left;
     margin-left: 5px;
+    text-align: center;
+}
+
+.rankingParagraph{
+    font-size: 40px;
+}
+
+#rangi{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+    gap: 10px;
 }
 
 #wybor {
@@ -411,4 +426,32 @@ body {
 
 #adminWybor a:hover{
     background-color: #017249;
+}
+
+#searchbar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#wyborKat {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#wyborKat a {
+    text-decoration: none;
+    background-color: #04aa44;
+    padding: 5px;
+    color: rgb(242, 255, 237);
+    transition-duration: 0.2s;
+}
+
+#wyborKat a:hover {
+    background-color: #04915b;
 }

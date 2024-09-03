@@ -51,6 +51,7 @@
         else{
             echo "<p class='alldone'>Rozwiązałeś już wszystkie fiszki z tej kategorii!<br><br><a href='index.php'>Powrót</a></p>";
         }
+        $conn->close();
     ?>
     </div>
 </body>
