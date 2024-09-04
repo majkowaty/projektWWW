@@ -22,9 +22,9 @@
     }
     elseif(isset($_GET["fraza"])) {
         $fraza= $_GET["fraza"];
-        $sql .=" WHERE SlowkoP OR SlowkoA LIKE '%$fraza%'";
+        $sql .=" WHERE SlowkoP LIKE '%$fraza%' OR SlowkoA LIKE '%$fraza%'";
     }
-    $result=$conn->query("$sql");
+    $result=$conn->query($sql);
     echo "<h2>Zarządzanie fiszkami</h2>";
     echo "<form id='searchbar'><input type='text' placeholder='Wyszukaj frazą' name='fraza'><input type='submit' value='Wyszukaj'></form>";
     echo "<div id='wyborKat'><a href='fiszkilista.php'>Wszystkie</a><a href='fiszkilista.php?Kat=A'>Początkujący</a><a href='fiszkilista.php?Kat=B'>Średni</a><a href='fiszkilista.php?Kat=C'>Zaawansowany</a></div>";
