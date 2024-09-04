@@ -464,3 +464,15 @@ body {
     width: 60px;
     height: 60px;
 }
+
+
+#pfpmenu {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: darkseagreen;
+    width:50%;
+    padding: 15px;
+}

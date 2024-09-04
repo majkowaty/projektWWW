@@ -10,8 +10,8 @@
 <body>
     <?php require('menu.php'); ?>
     <div id="content">
-    <p>Prześlij swoje zdjęcie profilowe</p>
-    <form action="updatePfp.php" method="post" enctype="multipart/form-data">
+    <h2>Prześlij swoje zdjęcie profilowe</h2>
+    <form action="updatePfp.php" method="post" enctype="multipart/form-data" id="pfpmenu">
         <p>
         Obrazek: <input type="file" name="obrazek">
         </p>
